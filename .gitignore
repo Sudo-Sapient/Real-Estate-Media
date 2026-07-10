@@ -20,12 +20,17 @@
 # production
 /build
 
+# local lead storage
+/data/
+
 # misc
 .DS_Store
 *.pem
 
 # debug
 npm-debug.log*
+dev-server.log
+.dev-server.pid
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
