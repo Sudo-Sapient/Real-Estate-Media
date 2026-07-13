@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sudo Estate
 
-## Getting Started
+A premium, conversion-focused website for Sudo Estate—an AI-assisted creative production studio that transforms property renders, photographs, floor plans, and listing assets into cinematic advertisements and social campaign creative.
 
-First, run the development server:
+## Features
+
+- Cinematic, responsive marketing homepage
+- Interactive source-to-campaign comparison
+- GSAP and Framer Motion animation
+- Focused benefits and production process
+- Spec campaign presentation with honest labeling
+- Project enquiry form and Next.js lead API
+- Mobile navigation and responsive layouts
+- Premium Manrope and Source Serif typography
+
+## Technology
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- GSAP
+- Framer Motion
+
+## Local development
+
+Install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Start the Webpack development server on port 3001:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev -- -p 3001
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3001](http://localhost:3001).
 
-## Learn More
+## Production validation
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Lead storage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The `/api/leads` endpoint stores submissions in `data/leads.ndjson` during local development. The `data` directory is intentionally excluded from Git.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For a serverless production deployment, connect the endpoint to durable storage or an email service because local filesystem writes are not persistent on platforms such as Vercel.
